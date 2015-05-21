@@ -1,0 +1,39 @@
+<div class="well row">
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-responsive thumbnail"
+                    src="http://ppgym.altervista.org/img/instructors/{{currentCourse.instructor}}/1.jpg"
+                    alt="{{currentCourse.iname}}">
+            </div>
+            <div class="col-md-6">
+                <p>Nella foto a sinistra l'istruttore del corso,
+                    <a href="#/instructors/{{currentCourse.instructor}}">{{currentCourse.iname}}</a>.</p>
+            </div>
+        </div>
+        <div class="text-justify" ng-bind-html="currentCourse.schedule"></div>
+    </div>
+    <div class="col-md-6">
+        <div ng-hide="alert != null">
+            <h3>Iscriviti a questo corso</h3>
+            <form class="disabled" name="signInForm" ng-init="cardNumber = ''">
+                <div class="form-group">
+                    <label for="codeInfo">Codice Tessera</label>
+
+                    <input type="tel" ng-model="cardNumber" class="form-control" id="codeInfo" name="cardNum"
+                           placeholder="Inserire codice tessera" numbers-only>
+
+                    <alert type="danger" ng-show="cardNumber == ''">
+                        Inserire il numero della tessera.
+                    </alert>
+                </div>
+                <button type="submit" class="btn btn-default left" ng-click="signInCourse(cardNumber)"
+                        ng-disabled="cardNumber == ''">
+                    Submit
+                </button>
+            </form>
+        </div>
+
+        <alert type="{{alert.type}}" ng-hide="alert === null">{{alert.msg}}</alert>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="row container-fluid">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+        <ul class="pager pull-left">
+            <li ng-class="{disabled : nameOrdering()}">
+                <a href="" ng-click="sort = ['name']">Ordina per nome</a>
+            </li>
+            <li ng-class="{disabled : !nameOrdering()}">
+                <a href="" ng-click="sort = ['level', 'name']">Ordina per livello</a>
+            </li>
+        </ul>
+        <div class="pull-right">
+            <dir-pagination-controls></dir-pagination-controls>
+        </div>
+
+    </div>
+</div>
+
+<div class="row container-fluid">
+    <div class="col-md-2">
+        <div class="list-group hidden-xs" ng-repeat="category in allCategories | orderBy : 'name'">
+            <p class="btn btn-default btn-block" ng-class="{active : isCategoryActive(category)}"
+               ng-click="selectCategory(category.id)">
+                {{category.name}}
+            </p>
+        </div>
+
+
+        <div class="visible-xs visible-xs-block" dropdown dropdown-append-to-body>
+            <button type="button" class="btn btn-default btn-block dropdown-toggle" dropdown-toggle>
+                {{categoryButtonText}} <span class="caret"></span>
+            </button>
+            <div class="dropdown-menu" role="menu">
+                <div ng-repeat="category in allCategories | orderBy : 'name'">
+                    <p class="btn btn-default btn-block" ng-class="{active : isCategoryActive(category)}"
+                       ng-click="selectCategory(category.id)">
+                        {{category.name}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <tr dir-paginate="course in allCourses | itemsPerPage: 8 |courseByCategories:selectedCategory |
+                                    orderBy:sort" class="animate-repeat">
+                    <td>
+                        <a href="#/courses/{{course.id}}">{{course.name}}</a>
+                        <p class="text-justify" ng-bind-html="course.short_description"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

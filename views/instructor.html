@@ -1,0 +1,33 @@
+
+    <div >
+        <h1>{{currentInstructor.name}}</h1>
+
+        <div>
+            {{currentInstructor.description}}
+
+
+        </div>
+        <div class="row panel-body">
+            <div class="col-md-3">
+
+                <img src=" http://ppgym.altervista.org/img/instructors/{{currentInstructor.id}}/1.jpg " class="img-thumbnail"/>
+
+            </div>
+            <div class="col-md-9">
+
+                    <div style="height: 305px">
+                        <carousel interval="myInterval">
+                            <slide ng-repeat="slide in slides" active="slide.active">
+                                <img ng-src="{{slide.image}}" style="margin:auto;">
+                                <div class="carousel-caption">
+                                    <h4>Slide {{$index}}</h4>
+                                    <p>{{slide.text}}</p>
+                                </div>
+                            </slide>
+                        </carousel>
+                    </div>
+
+            </div>
+            </div>
+        </div>
+

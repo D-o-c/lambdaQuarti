@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <h1>{{currentCourse.name}}</h1>
+    <tabset>
+        <tab heading="Informazioni Generali">
+            <ng-include src="'views/singleCourse_generalInfo.html'"></ng-include>
+        </tab>
+        <tab heading="Stanza & Orari">
+            <ng-include src="'views/singleCourse_roomAndSchedule.html'"></ng-include>
+        </tab>
+
+    </tabset>
+
+</div>

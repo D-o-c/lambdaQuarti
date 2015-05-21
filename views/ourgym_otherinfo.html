@@ -1,0 +1,84 @@
+<div class="panel panel-default panel-heading">
+
+
+
+    <div class="row panel-body">
+
+        <div class="col-md-6">
+            <div class="panel-default">
+                <h4>La nostra storia</h4>
+                <p class="text-justify">
+                L’avventura di PPGYM nasce nel 1957 in un piccolo locale in affitto di 360 mq ad Adrano in
+                Via B. Cipiti, dall’idea di Robert, un pugile italo-americano. Cinque anni dopo nel 1962,
+                Robert intuisce le richieste del mercato e inaugura la prima struttura in Adrano dedicata al
+                fitness, progettata per offrire ai clienti un luogo adeguato dove allenarsi, in una spaziosa sala
+                attrezzi e una sala fitness riservata.<br/>
+                Nel 1995 Selma e Arabella già insegnanti nel Centro, prendono la guida di PPGYM portando una
+                ventata di energia e innovazione. Vengono inserite attività in quel momento all’avanguardia come
+                Life pump, total body, step coreografico, funky, che si affiancano al consueto corpo libero e
+                aerobica tradizionale, in modo da soddisfare le esigenze di un numero sempre maggiore di clienti.
+                L’evoluzione della palestra è sempre in continuo movimento: con l’ingresso fra i soci di Alec e
+                Alucard, nel 2000 il centro è stato completamente ristrutturato e ampliato fino a 1000 mq, inserendo
+                una nuova sala attrezzi  e  due sale per l’attività di gruppo.
+                Le richieste e le necessità salutistiche dei clienti sono sempre più pressanti, ed è per questo
+                motivo che nel 2006 PPGYM è in grado di aggiungere un’ulteriore sala di 360 mq alla già vasta
+                sala attrezzi, diventando così la struttura più completa nel panorama adranito, unanimamente
+                riconosciuta all’avanguardia per la qualità dei servizi.<br/>
+                Nel 2007 PPGYM fa ancora un passo per venire incontro a sempre nuove esigenze di tempo, qualità
+                e stile di vita ed inaugura il Centro Benessere, “PPGYM wellness” che offre ai propri clienti
+                servizi estetici e relax.<br/>
+                Per mantenere sempre costante l’alto livello del servizio offerto, nel 2009 PPGYM ingrandisce
+                ulteriormente la propria  sala attrezzi, dotandola delle migliori attrezzature per l’allenamento
+                cardiovascolare, isotonico e funzionale e inserisce nuovissime lezioni quali  TRX, Strike zone,
+                Rebounder, Body flying  e tanto altro.<br/>
+                Un club davvero esemplare che concentra in un unico complesso una straordinaria varietà di
+                strutture e servizi, tali da soddisfare le attese di un pubblico quanto mai diverso.
+                </p>
+            </div>
+            <div class="panel-default">
+                <h4>PPGYM per il Sociale</h4>
+                <p class="text-justify">L’essere umano vive per sua natura in relazione con gli altri. E’ una sua necessità di cui non può
+                    fare a meno. Pensate ai nostri organi di senso: sono costruiti in maniera tale da permetterci di
+                    uscire da noi stessi per andare verso qualcosa o qualcuno.
+                    In effetti la possibilità di realizzazione di un Io è sempre verso un Tu. Qualcuno diceva,<br/>
+                    <blockquote>
+                        <p>“Io sono le persone che incontro”.</p>
+                    </blockquote>
+                    Educare vuol dire aiutare l’altro a venire fuori, a manifestarsi, a realizzarsi secondo le
+                    sue potenzialità. Ogni persona ha un potenziale innato ed acquisito che può manifestarsi: occorre
+                    aiutare la persona, il ragazzo, il bambino a realizzarlo. E’ questo il senso più autentico di ogni
+                    relazione educativa. Aiutare l’altro ad aiutarsi da sé. Significa che la condizione di aiuto può
+                    essere autentica, se teniamo in considerazione i tempi di crescita di ogni persona. Rispettare
+                    l’altro e il suo essere persona che diviene nel tempo. L’educazione non ha fretta, è un tempo di
+                    attesa e non di pretesa.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+
+                <div class="embed-responsive embed-responsive-16by9">
+                    <youtube-video class="embed-responsive-item" video-id="videoOther"></youtube-video>
+                </div>
+
+
+            </div>
+            <div class="panel panel-default">
+                <div style="height: 305px">
+                    <carousel interval="myInterval">
+                        <slide ng-repeat="slide in slides" active="slide.active">
+                            <img ng-src="{{slide.image}}" style="margin:auto;">
+                            <div class="carousel-caption">
+                                <h4>Slide {{$index}}</h4>
+                                <p>{{slide.text}}</p>
+                            </div>
+                        </slide>
+                    </carousel>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
